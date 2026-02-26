@@ -9,22 +9,55 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_n4p8j"]
 animations = [{
 "frames": [{
-"duration": 0.8,
+"duration": 0.6,
 "texture": ExtResource("3_ivn86")
 }, {
-"duration": 0.8,
+"duration": 3.7,
+"texture": ExtResource("1_km3sh")
+}, {
+"duration": 0.54,
+"texture": ExtResource("4_avv66")
+}, {
+"duration": 1.33,
+"texture": ExtResource("5_v43du")
+}, {
+"duration": 2.05,
+"texture": ExtResource("1_km3sh")
+}, {
+"duration": 0.95,
+"texture": ExtResource("3_ivn86")
+}, {
+"duration": 0.23,
+"texture": ExtResource("4_avv66")
+}, {
+"duration": 0.64,
+"texture": ExtResource("4_avv66")
+}, {
+"duration": 2.75,
 "texture": ExtResource("1_km3sh")
 }, {
 "duration": 0.8,
+"texture": ExtResource("3_ivn86")
+}, {
+"duration": 2.15,
+"texture": ExtResource("1_km3sh")
+}, {
+"duration": 0.64,
 "texture": ExtResource("4_avv66")
 }, {
-"duration": 0.8,
+"duration": 4.85,
 "texture": ExtResource("5_v43du")
+}, {
+"duration": 0.6,
+"texture": ExtResource("3_ivn86")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"idle_enter",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivn86"]
+size = Vector2(577, 582)
 
 [node name="Node2D" type="Node2D" unique_id=962781557]
 
@@ -36,8 +69,9 @@ texture = ExtResource("1_lyfew")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=911775187]
 sprite_frames = SubResource("SpriteFrames_n4p8j")
-animation = &"idle"
-frame = 3
-frame_progress = 0.9951748
+animation = &"idle_enter"
+frame_progress = 0.19043319
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=578751015]
+position = Vector2(211.5, 23)
+shape = SubResource("RectangleShape2D_ivn86")
