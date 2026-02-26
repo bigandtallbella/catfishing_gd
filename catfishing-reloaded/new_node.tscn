@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dpevihqthvtq"]
+
+[ext_resource type="Texture2D" uid="uid://nh2vq5q7fpn7" path="res://cat_blink1.png" id="1_km3sh"]
+[ext_resource type="Texture2D" uid="uid://chs5ojop4rueq" path="res://fishing_bg.png" id="1_lyfew"]
+[ext_resource type="Texture2D" uid="uid://c5oxfulhpxgf5" path="res://cat_blink3.png" id="3_ivn86"]
+[ext_resource type="Texture2D" uid="uid://1hfst8ct2uhj" path="res://cat_blink2.png" id="4_avv66"]
+[ext_resource type="Texture2D" uid="uid://c6jp3le2i3hxt" path="res://cat_blink4.png" id="5_v43du"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n4p8j"]
+animations = [{
+"frames": [{
+"duration": 0.8,
+"texture": ExtResource("3_ivn86")
+}, {
+"duration": 0.8,
+"texture": ExtResource("1_km3sh")
+}, {
+"duration": 0.8,
+"texture": ExtResource("4_avv66")
+}, {
+"duration": 0.8,
+"texture": ExtResource("5_v43du")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=962781557]
+
+[node name="FishingBg" type="Sprite2D" parent="." unique_id=1944621496]
+position = Vector2(17, 20)
+texture = ExtResource("1_lyfew")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1780915771]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=911775187]
+sprite_frames = SubResource("SpriteFrames_n4p8j")
+animation = &"idle"
+frame = 3
+frame_progress = 0.9951748
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=578751015]
